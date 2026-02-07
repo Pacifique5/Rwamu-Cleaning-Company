@@ -38,26 +38,35 @@ export default function HeroSection() {
         />
 
         {/* Floating Particles */}
-        {[...Array(20)].map((_, i) => (
-          <motion.div
-            key={i}
-            className="absolute w-2 h-2 bg-blue-400/20 dark:bg-blue-500/30 rounded-full"
-            animate={{
-              y: [0, -100, 0],
-              x: [0, Math.random() * 100 - 50, 0],
-              opacity: [0, 1, 0],
-            }}
-            transition={{
-              duration: Math.random() * 10 + 10,
-              repeat: Infinity,
-              delay: Math.random() * 5,
-            }}
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-            }}
-          />
-        ))}
+        {[...Array(20)].map((_, i) => {
+          // Generate consistent values for SSR/client
+          const xOffset = ((i * 37) % 100) - 50;
+          const duration = 10 + ((i * 13) % 10);
+          const delay = (i * 7) % 5;
+          const leftPos = (i * 47) % 100;
+          const topPos = (i * 31) % 100;
+          
+          return (
+            <motion.div
+              key={i}
+              className="absolute w-2 h-2 bg-blue-400/20 dark:bg-blue-500/30 rounded-full"
+              animate={{
+                y: [0, -100, 0],
+                x: [0, xOffset, 0],
+                opacity: [0, 1, 0],
+              }}
+              transition={{
+                duration,
+                repeat: Infinity,
+                delay,
+              }}
+              style={{
+                left: `${leftPos}%`,
+                top: `${topPos}%`,
+              }}
+            />
+          );
+        })}
       </div>
 
       <div className="container mx-auto px-4 py-20 relative z-10">
