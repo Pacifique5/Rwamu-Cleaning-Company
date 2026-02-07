@@ -1,36 +1,129 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Rwamu Cleaning Soap Products
+
+A modern, professional portfolio website for Rwamu Cleaning Soap Products - a Rwandan manufacturer of premium liquid cleaning solutions.
+
+## About Rwamu
+
+**Mission:** "Let's keep our environment clean"
+
+Rwamu Cleaning Soap Products is a trusted manufacturer and distributor of high-quality liquid cleaning products based in Kigali – Gasabo, Rwanda. We provide professional-grade cleaning solutions for homes, businesses, and institutions across Rwanda.
+
+## Products
+
+- Floor & Mopping Liquid
+- Toilet Cleaner
+- Dishwashing Liquid
+- General Surface Cleaner
+- Glass & Window Cleaner
+- Liquid Laundry Detergent
+
+**Available Sizes:** 1L, 5L, 25L
+
+## Tech Stack
+
+- **Framework:** Next.js 16 (App Router)
+- **Language:** TypeScript
+- **Styling:** Tailwind CSS v4
+- **Animations:** Framer Motion
+- **Icons:** Lucide React
+- **Font:** Inter (Google Fonts)
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
 
+- Node.js 18+ installed
+- npm or yarn package manager
+
+### Installation
+
+1. Clone the repository or navigate to the project directory:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+cd rwamu-cleaning-soap
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-## Learn More
+### Build for Production
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run build
+npm start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Structure
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```
+rwamu-cleaning-soap/
+├── app/
+│   ├── about/
+│   │   └── page.tsx
+│   ├── contact/
+│   │   └── page.tsx
+│   ├── products/
+│   │   └── page.tsx
+│   ├── layout.tsx
+│   ├── page.tsx
+│   └── globals.css
+├── components/
+│   ├── Navbar.tsx
+│   ├── Footer.tsx
+│   ├── HeroSection.tsx
+│   ├── ProductCard.tsx
+│   └── CTASection.tsx
+├── lib/
+│   ├── products.ts
+│   └── utils.ts
+└── public/
+```
 
-## Deploy on Vercel
+## Features
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- ✅ Fully responsive design (mobile-first)
+- ✅ Smooth animations and transitions
+- ✅ SEO optimized
+- ✅ Professional UI/UX
+- ✅ Contact form (frontend)
+- ✅ WhatsApp integration
+- ✅ Product showcase
+- ✅ Company information
+- ✅ Fast performance
+- ✅ TypeScript for type safety
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Contact Information
+
+**Location:** Kigali – Gasabo, Rwanda
+
+**Phone:**
+- +250 787 676 675
+- +250 725 482 196
+
+**WhatsApp:** +250 787 676 675
+
+## Future Enhancements
+
+- E-commerce functionality
+- Online ordering system
+- Payment integration
+- Customer accounts
+- Order tracking
+- Product reviews
+- Multi-language support (Kinyarwanda, French, English)
+
+## License
+
+© 2026 Rwamu Cleaning Soap Products. All rights reserved.
+
+---
+
+Made in Rwanda 🇷🇼 with care for your home and environment
