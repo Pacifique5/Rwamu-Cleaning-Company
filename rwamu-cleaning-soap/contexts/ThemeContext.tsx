@@ -16,32 +16,46 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
   const [theme, setTheme] = useState<Theme>("light");
   const [mounted, setMounted] = useState(false);
 
+  // Initialize theme on mount
   useEffect(() => {
-    setMounted(true);
     const savedTheme = localStorage.getItem("theme") as Theme | null;
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     
-    if (savedTheme) {
-      setTheme(savedTheme);
-    } else if (prefersDark) {
-      setTheme("dark");
-    }
+    // Start with light mode by default, only use dark if explicitly saved
+    const initialTheme = savedTheme || "light";
+    setTheme(initialTheme);
+    
+    // Apply theme to DOM immediately
+    const root = document.documentElement;
+    root.classList.remove("light", "dark");
+    root.classList.add(initialTheme);
+    
+    console.log("🎨 Initial theme set to:", initialTheme);
+    
+    setMounted(true);
   }, []);
 
+  // Update DOM and localStorage when theme changes
   useEffect(() => {
-    if (mounted) {
-      const root = document.documentElement;
-      if (theme === "dark") {
-        root.classList.add("dark");
-      } else {
-        root.classList.remove("dark");
-      }
-      localStorage.setItem("theme", theme);
-    }
+    if (!mounted) return;
+    
+    const root = document.documentElement;
+    
+    // Remove both classes first to ensure clean state
+    root.classList.remove("light", "dark");
+    
+    // Add the current theme class
+    root.classList.add(theme);
+    
+    // Save to localStorage
+    localStorage.setItem("theme", theme);
+    
+    console.log("✅ Theme applied:", theme, "- DOM classes:", root.className);
   }, [theme, mounted]);
 
   const toggleTheme = () => {
-    setTheme((prev) => (prev === "light" ? "dark" : "light"));
+    const newTheme = theme === "light" ? "dark" : "light";
+    console.log("🔄 Toggling theme:", theme, "→", newTheme);
+    setTheme(newTheme);
   };
 
   return (
