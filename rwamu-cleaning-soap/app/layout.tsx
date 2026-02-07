@@ -20,19 +20,6 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              try {
-                const theme = localStorage.getItem('theme') || 'light';
-                document.documentElement.classList.remove('light', 'dark');
-                document.documentElement.classList.add(theme);
-              } catch (e) {}
-            `,
-          }}
-        />
-      </head>
       <body className={`${inter.className} antialiased`}>
         <ThemeProvider>
           <Navbar />
