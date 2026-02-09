@@ -24,12 +24,13 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     const initialTheme = savedTheme || "light";
     setTheme(initialTheme);
     
-    // Apply theme to DOM immediately
+    // Apply theme to DOM immediately and forcefully
     const root = document.documentElement;
     root.classList.remove("light", "dark");
     root.classList.add(initialTheme);
     
-    console.log("🎨 Initial theme set to:", initialTheme);
+    // Force a style recalculation
+    root.style.colorScheme = initialTheme;
     
     setMounted(true);
   }, []);
@@ -46,10 +47,14 @@ export function ThemeProvider({ children }: { children: ReactNode }) {
     // Add the current theme class
     root.classList.add(theme);
     
+    // Force style recalculation
+    root.style.colorScheme = theme;
+    
     // Save to localStorage
     localStorage.setItem("theme", theme);
     
-    console.log("✅ Theme applied:", theme, "- DOM classes:", root.className);
+    // Force a repaint
+    void root.offsetHeight;
   }, [theme, mounted]);
 
   const toggleTheme = () => {
