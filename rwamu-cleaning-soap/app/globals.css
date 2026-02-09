@@ -1,6 +1,9 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  /* Enable dark mode with class strategy */
+  --color-scheme: light dark;
+}
 
 /* Root variables for theming */
 :root {
