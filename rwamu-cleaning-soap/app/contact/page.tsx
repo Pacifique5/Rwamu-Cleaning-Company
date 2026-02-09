@@ -77,10 +77,10 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Phone Numbers</h3>
                       <a
-                        href="tel:+250787676675"
+                        href="tel:+250787667675"
                         className="block text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium mb-1"
                       >
-                        +250 787 676 675
+                        +250 787 667 675
                       </a>
                       <a
                         href="tel:+250725482196"
@@ -100,7 +100,7 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-semibold text-gray-900 dark:text-white mb-2">WhatsApp</h3>
                       <a
-                        href="https://wa.me/250787676675"
+                        href="https://wa.me/250787667675"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-green-600 dark:text-green-400 hover:text-green-700 dark:hover:text-green-300 font-medium"
@@ -258,14 +258,14 @@ export default function ContactPage() {
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <a
-                  href="tel:+250787676675"
+                  href="tel:+250787667675"
                   className="bg-gradient-to-r from-blue-600 to-blue-700 dark:from-blue-500 dark:to-green-500 text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center space-x-2"
                 >
                   <Phone className="w-5 h-5" />
                   <span>Call Now</span>
                 </a>
                 <a
-                  href="https://wa.me/250787676675"
+                  href="https://wa.me/250787667675"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="bg-green-500 dark:bg-green-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center space-x-2"

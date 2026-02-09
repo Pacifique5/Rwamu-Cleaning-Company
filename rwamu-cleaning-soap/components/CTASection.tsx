@@ -82,7 +82,7 @@ export default function CTASection() {
           {/* Contact Options Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
             <motion.a
-              href="tel:+250787676675"
+              href="tel:+250787667675"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
@@ -99,7 +99,7 @@ export default function CTASection() {
                   </div>
                   <div className="text-left flex-1">
                     <p className="text-sm text-blue-200 mb-1">Call us now</p>
-                    <p className="font-bold text-2xl">+250 787 676 675</p>
+                    <p className="font-bold text-2xl">+250 787 667 675</p>
                   </div>
                   <ArrowRight className="w-6 h-6 text-blue-300 group-hover:translate-x-2 transition-transform" />
                 </div>
@@ -107,7 +107,7 @@ export default function CTASection() {
             </motion.a>
 
             <motion.a
-              href="https://wa.me/250787676675"
+              href="https://wa.me/250787667675"
               target="_blank"
               rel="noopener noreferrer"
               initial={{ opacity: 0, x: 20 }}
@@ -126,7 +126,7 @@ export default function CTASection() {
                   </div>
                   <div className="text-left flex-1">
                     <p className="text-sm text-green-100 mb-1">WhatsApp us</p>
-                    <p className="font-bold text-2xl">+250 787 676 675</p>
+                    <p className="font-bold text-2xl">+250 787 667 675</p>
                   </div>
                   <ArrowRight className="w-6 h-6 text-green-100 group-hover:translate-x-2 transition-transform" />
                 </div>
